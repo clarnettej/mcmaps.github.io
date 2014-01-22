@@ -3,162 +3,230 @@
   <head>
     <meta charset="utf-8"/>
     <title>MC Maps</title>
+    <style type="text/css" media="screen">
+      .path {
+        vector-effect: non-scaling-stroke;
+        stroke-width: 4;
+        stroke: #000000;
+        fill: none;
+      }
+      .path-railway {
+        stroke-dasharray: 2,2;
+      }
+      .path-railway-east {
+        stroke: #0000cc;
+      }
+      .path-railway-north {
+        stroke: #009900;
+      }
+      .path-road {
+        stroke-dasharray: 8,4,4,4;
+      }
+      .place {
+        vector-effect: non-scaling-stroke;
+      }
+      text {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+      }
+    </style>
   </head>
   <body>
 
-    <svg width="1536px" height="1024px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
+    <svg width="1536" height="1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
 
       <filter id="desaturate">
-        <feColorMatrix in="SourceGraphic" type="saturate" values="0.5"/>
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0.6 0.6 0.6 0.2 0 0.5 0.5 0.5 0.2 0 0.4 0.4 0.4 0.2 0 0.0 0.0 0.0 1.0 0"/>
       </filter>
 
       <g transform="translate(768,512)" filter="url(#desaturate)">
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_2/zzzz_-96_64.png"   x="-768px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-96_48.png"   x="-768px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-96_32.png"   x="-768px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-96_16.png"   x="-768px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-96_0.png"    x="-768px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-96_-16.png" x="-768px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-96_-32.png" x="-768px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-2/zzzz_-96_-48.png" x="-768px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_2/zzzz_-96_64.png"   x="-768" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-96_48.png"   x="-768" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-96_32.png"   x="-768" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-96_16.png"   x="-768" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-96_0.png"    x="-768" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-96_-16.png" x="-768" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-96_-32.png" x="-768" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-2/zzzz_-96_-48.png" x="-768" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_2/zzzz_-80_64.png"   x="-640px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-80_48.png"   x="-640px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-80_32.png"   x="-640px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-80_16.png"   x="-640px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-80_0.png"    x="-640px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-80_-16.png" x="-640px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-80_-32.png" x="-640px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-2/zzzz_-80_-48.png" x="-640px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_2/zzzz_-80_64.png"   x="-640" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-80_48.png"   x="-640" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_1/zzzz_-80_32.png"   x="-640" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-80_16.png"   x="-640" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_0/zzzz_-80_0.png"    x="-640" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-80_-16.png" x="-640" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-1/zzzz_-80_-32.png" x="-640" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-3_-2/zzzz_-80_-48.png" x="-640" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_2/zzzz_-64_64.png"   x="-512px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-64_48.png"   x="-512px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-64_32.png"   x="-512px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-64_16.png"   x="-512px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-64_0.png"    x="-512px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-64_-16.png" x="-512px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-64_-32.png" x="-512px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-2/zzzz_-64_-48.png" x="-512px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_2/zzzz_-64_64.png"   x="-512" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-64_48.png"   x="-512" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-64_32.png"   x="-512" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-64_16.png"   x="-512" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-64_0.png"    x="-512" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-64_-16.png" x="-512" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-64_-32.png" x="-512" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-2/zzzz_-64_-48.png" x="-512" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_2/zzzz_-48_64.png"   x="-384px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-48_48.png"   x="-384px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-48_32.png"   x="-384px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-48_16.png"   x="-384px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-48_0.png"    x="-384px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-48_-16.png" x="-384px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-48_-32.png" x="-384px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-2/zzzz_-48_-48.png" x="-384px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_2/zzzz_-48_64.png"   x="-384" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-48_48.png"   x="-384" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_1/zzzz_-48_32.png"   x="-384" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-48_16.png"   x="-384" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_0/zzzz_-48_0.png"    x="-384" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-48_-16.png" x="-384" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-1/zzzz_-48_-32.png" x="-384" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-2_-2/zzzz_-48_-48.png" x="-384" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_2/zzzz_-32_64.png"   x="-256px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-32_48.png"   x="-256px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-32_32.png"   x="-256px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-32_16.png"   x="-256px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-32_0.png"    x="-256px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-32_-16.png" x="-256px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-32_-32.png" x="-256px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-2/zzzz_-32_-48.png" x="-256px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_2/zzzz_-32_64.png"   x="-256" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-32_48.png"   x="-256" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-32_32.png"   x="-256" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-32_16.png"   x="-256" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-32_0.png"    x="-256" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-32_-16.png" x="-256" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-32_-32.png" x="-256" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-2/zzzz_-32_-48.png" x="-256" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_2/zzzz_-16_64.png"   x="-128px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-16_48.png"   x="-128px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-16_32.png"   x="-128px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-16_16.png"   x="-128px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-16_0.png"    x="-128px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-16_-16.png" x="-128px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-16_-32.png" x="-128px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-2/zzzz_-16_-48.png" x="-128px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_2/zzzz_-16_64.png"   x="-128" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-16_48.png"   x="-128" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_1/zzzz_-16_32.png"   x="-128" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-16_16.png"   x="-128" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_0/zzzz_-16_0.png"    x="-128" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-16_-16.png" x="-128" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-1/zzzz_-16_-32.png" x="-128" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/-1_-2/zzzz_-16_-48.png" x="-128" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_2/zzzz_0_64.png"   x="0px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_0_48.png"   x="0px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_0_32.png"   x="0px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_0_16.png"   x="0px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_0_0.png"    x="0px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_0_-16.png" x="0px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_0_-32.png" x="0px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-2/zzzz_0_-48.png" x="0px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_2/zzzz_0_64.png"   x="0" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_0_48.png"   x="0" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_0_32.png"   x="0" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_0_16.png"   x="0" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_0_0.png"    x="0" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_0_-16.png" x="0" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_0_-32.png" x="0" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-2/zzzz_0_-48.png" x="0" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_2/zzzz_16_64.png"    x="128px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_16_48.png"    x="128px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_16_32.png"    x="128px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_16_16.png"    x="128px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_16_0.png"     x="128px" y="0px"     width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_16_-16.png"  x="128px" y="128px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_16_-32.png"  x="128px" y="256px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-2/zzzz_16_-48.png"  x="128px" y="384px"   width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_2/zzzz_16_64.png"    x="128" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_16_48.png"    x="128" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_1/zzzz_16_32.png"    x="128" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_16_16.png"    x="128" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_0/zzzz_16_0.png"     x="128" y="0"     width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_16_-16.png"  x="128" y="128"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-1/zzzz_16_-32.png"  x="128" y="256"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/0_-2/zzzz_16_-48.png"  x="128" y="384"   width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_2/zzzz_32_64.png"    x="256px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_32_48.png"    x="256px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_32_32.png"    x="256px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_32_16.png"    x="256px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_32_0.png"     x="256px" y="0px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_32_-16.png"  x="256px" y="128px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_32_-32.png"  x="256px" y="256px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-2/zzzz_32_-48.png"  x="256px" y="384px" width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_2/zzzz_32_64.png"    x="256" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_32_48.png"    x="256" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_32_32.png"    x="256" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_32_16.png"    x="256" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_32_0.png"     x="256" y="0"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_32_-16.png"  x="256" y="128" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_32_-32.png"  x="256" y="256" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-2/zzzz_32_-48.png"  x="256" y="384" width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_2/zzzz_48_64.png"    x="384px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_48_48.png"    x="384px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_48_32.png"    x="384px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_48_16.png"    x="384px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_48_0.png"     x="384px" y="0px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_48_-16.png"  x="384px" y="128px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_48_-32.png"  x="384px" y="256px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-2/zzzz_48_-48.png"  x="384px" y="384px" width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_2/zzzz_48_64.png"    x="384" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_48_48.png"    x="384" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_1/zzzz_48_32.png"    x="384" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_48_16.png"    x="384" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_0/zzzz_48_0.png"     x="384" y="0"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_48_-16.png"  x="384" y="128" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-1/zzzz_48_-32.png"  x="384" y="256" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/1_-2/zzzz_48_-48.png"  x="384" y="384" width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_2/zzzz_64_64.png"    x="512px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_64_48.png"    x="512px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_64_32.png"    x="512px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_64_16.png"    x="512px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_64_0.png"     x="512px" y="0px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_64_-16.png"  x="512px" y="128px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_64_-32.png"  x="512px" y="256px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-2/zzzz_64_-48.png"  x="512px" y="384px" width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_2/zzzz_64_64.png"    x="512" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_64_48.png"    x="512" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_64_32.png"    x="512" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_64_16.png"    x="512" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_64_0.png"     x="512" y="0"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_64_-16.png"  x="512" y="128" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_64_-32.png"  x="512" y="256" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-2/zzzz_64_-48.png"  x="512" y="384" width="128" height="128"/>
 
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_2/zzzz_80_64.png"    x="640px" y="-512px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_80_48.png"    x="640px" y="-384px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_80_32.png"    x="640px" y="-256px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_80_16.png"    x="640px" y="-128px"  width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_80_0.png"     x="640px" y="0px"   width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_80_-16.png"  x="640px" y="128px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_80_-32.png"  x="640px" y="256px" width="128px" height="128px"/>
-        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-2/zzzz_80_-48.png"  x="640px" y="384px" width="128px" height="128px"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_2/zzzz_80_64.png"    x="640" y="-512"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_80_48.png"    x="640" y="-384"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_1/zzzz_80_32.png"    x="640" y="-256"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_80_16.png"    x="640" y="-128"  width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_0/zzzz_80_0.png"     x="640" y="0"   width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_80_-16.png"  x="640" y="128" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-1/zzzz_80_-32.png"  x="640" y="256" width="128" height="128"/>
+        <image xlink:href="http://minecraft.games.on.net:5080/tiles/world/flat/2_-2/zzzz_80_-48.png"  x="640" y="384" width="128" height="128"/>
 
       </g>
 
-      <g transform="translate(768,520) scale(0.25,0.25)" stroke="#ff00ff" stroke-width="8" fill="none">
+      <g transform="translate(768,520) scale(0.25,0.25)">
 
         <!-- island to switch -->
-        <path d="M 769 -1255 L 773 -1255 L 773 -1246 L 774 -1246 L 774 -1244 L 757 -1244 L 757 -1253 L 717 -1253 L 717 -1249 L 312 -1249"/>
+        <path class="path path-railway path-railway-north" d="M 769 -1255 L 773 -1255 L 773 -1246 L 774 -1246 L 774 -1244 L 757 -1244 L 757 -1253 L 717 -1253 L 717 -1249 L 312 -1249"/>
 
         <!-- switch to village -->
-        <path d="M 312 -1249 L 312 -923 L 240 -923 L 240 -714 L 201 -714 L 201 -702"/>
+        <path class="path path-railway path-railway-north" d="M 312 -1249 L 312 -923 L 240 -923 L 240 -714 L 201 -714 L 201 -702"/>
 
         <!-- switch to plains -->
-        <path d="M 312 -1249 L 281 -1249 L 207 -1323 L 207 -1534 L -284 -1534 L -284 -1611"/>
+        <path class="path path-railway path-railway-north" d="M 312 -1249 L 281 -1249 L 207 -1323 L 207 -1534 L -284 -1534 L -284 -1611"/>
 
         <!-- village to spawn -->
-        <path d="M 192 -711 L 192 -9 L 182 -9 L 182 -19 L 192 -19 L 192 -8"/>
+        <path class="path path-railway path-railway-north" d="M 192 -711 L 192 -9 L 182 -9 L 182 -19 L 192 -19 L 192 -8"/>
 
         <!-- island to aurij -->
-        <path d="M 767 -1255 L 748 -1255 L 748 -1215"/>
+        <path class="path path-railway path-railway-north" d="M 767 -1255 L 748 -1255 L 748 -1215"/>
 
         <!-- aurij to brobo -->
-        <path d="M 745 -1216 L 745 -1101 L 1171 -1101 L 1171 -955 L 1281 -955"/>
+        <path class="path path-railway path-railway-north" d="M 745 -1216 L 745 -1101 L 1171 -1101 L 1171 -955 L 1281 -955"/>
 
         <!-- grand central to interchange -->
-        <path d="M -1611 -326 L -1611 -302 L -1592 -302 L -1592 -245 L -1186 -245"/>
+        <path class="path path-railway path-railway-east" d="M -1611 -326 L -1611 -302 L -1592 -302 L -1592 -245 L -1186 -245"/>
 
         <!-- interchange to mage district -->
-        <path d="M -1186 -245 L -1186 -187 L -1184 -187 L -1184 -185"/>
+        <path class="path path-railway path-railway-east" d="M -1186 -245 L -1186 -187 L -1184 -187 L -1184 -185"/>
 
         <!-- mage district to south (incomplete) -->
-        <path d="M -1184 -185 L -1184 -187 L -1186 -187 L -1186 -124 L -1184 -124"/>
+        <path class="path path-railway path-railway-east" d="M -1184 -185 L -1184 -187 L -1186 -187 L -1186 -124 L -1184 -124"/>
 
         <!-- interchange to mage water world -->
-        <path d="M -1186 -245 L -1156 -245 L -1156 -252 L -1148 -252 L -1148 -371 L -910 -371 L -910 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -433 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -910 -443 L -910 -441"/>
+        <path class="path path-railway path-railway-east" d="M -1186 -245 L -1156 -245 L -1156 -252 L -1148 -252 L -1148 -371 L -910 -371 L -910 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -433 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -910 -443 L -910 -441"/>
 
         <!-- grand central to clarnettej -->
-        <path d="M -1619 -326 L -1619 -320 L -1625 -320 L -1625 -343 L -2121 -343 L -2121 -576 L -2351 -576 L -2351 -566 L -2354 -566 L -2354 -561 L -2354 -561 L -2364 -561 L -2364 -565"/>
+        <path class="path path-railway path-railway-east" d="M -1619 -326 L -1619 -320 L -1625 -320 L -1625 -343 L -2121 -343 L -2121 -576 L -2351 -576 L -2351 -566 L -2354 -566 L -2354 -561 L -2354 -561 L -2364 -561 L -2364 -565"/>
 
+      </g>
+
+      <g transform="translate(768,520) scale(0.25,0.25)">
+
+        <!-- spawn -->
+        <circle class="place" r="16" cx="58" cy="231" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- island trains station (incomplete) -->
+        <circle class="place" r="16" cx="768" cy="-1255" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- interchange -->
+        <circle class="place" r="16" cx="312" cy="-1249" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- village station -->
+        <circle class="place" r="16" cx="196" cy="-706" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- plains -->
+        <circle class="place" r="16" cx="-284" cy="-1611" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- aurij -->
+        <circle class="place" r="16" cx="742" cy="-1218" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- brobo -->
+        <circle class="place" r="16" cx="1281" cy="-955" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- interchange -->
+        <circle class="place" r="16" cx="-1186" cy="-245" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- grand central -->
+        <circle class="place" r="16" cx="-1611" cy="-337" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- clarnettej -->
+        <circle class="place" r="16" cx="-2361" cy="-576" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+      </g>
+
+      <g transform="translate(1272, 8)">
+        <rect width="256" height="48" fill="#ffffff" stroke="#000000"/>
+        <text x="16" y="16" dy="4">Railway</text> <path class="path path-railway" d="M 128 16 L 240 16"/>
+        <text x="16" y="32" dy="4">Road</text> <path class="path path-road" d="M 128 32 L 240 32"/>
       </g>
 
     </svg>

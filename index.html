@@ -6,21 +6,23 @@
     <style type="text/css" media="screen">
       .path {
         vector-effect: non-scaling-stroke;
-        stroke-width: 4;
-        stroke: #000000;
+        stroke-width: 2;
+        stroke: #666666;
         fill: none;
       }
       .path-railway {
+        stroke-width: 3;
         stroke-dasharray: 2,2;
       }
-      .path-railway-east {
+      .path-railway-west {
         stroke: #0000cc;
       }
       .path-railway-north {
         stroke: #009900;
       }
       .path-road {
-        stroke-dasharray: 8,4,4,4;
+        stroke-width: 2;
+        stroke: #000000;
       }
       .place {
         vector-effect: non-scaling-stroke;
@@ -37,7 +39,7 @@
     <svg width="1536" height="1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink">
 
       <filter id="desaturate">
-        <feColorMatrix in="SourceGraphic" type="matrix" values="0.6 0.6 0.6 0.2 0 0.5 0.5 0.5 0.2 0 0.4 0.4 0.4 0.2 0 0.0 0.0 0.0 1.0 0"/>
+        <feColorMatrix in="SourceGraphic" type="matrix" values="0.6 0.6 0.6 0.8 0 0.5 0.5 0.5 0.8 0 0.4 0.4 0.4 0.8 0 0.0 0.0 0.0 1.0 0"/>
       </filter>
 
       <g transform="translate(768,512)" filter="url(#desaturate)">
@@ -152,6 +154,18 @@
 
       </g>
 
+      <!-- ROADS -->
+      <g transform="translate(768,520) scale(0.25,0.25)">
+
+        <!-- light path in the south-west -->
+        <path class="path path-road" d="M -363 427 L -365 429 L -368 429 L -379 440 L -615 440"/>
+
+        <!-- stone path WSW -->
+        <path class="path path-road" d="M -1670 581 L -1709 581 L -1714 576 L -1715 576 L -1715 575 L -1719 575 L -1728 570 L -1730 570 L -1730 569 L -1851 569 L -1851 570 L -1852 651 L -1847 656 L -1847 679 L -1859 691 L -1859 734 L -1871 746 L -1970 746 L -1979 755 L -1979 761 L -1988 770 L -1988 777 L -1995 784 L -1995 809 L -2016 830 L -2016 840 L -2023 847 L -2059 847 L -2068 856 L -2112 856 L -2119 849 L -2124 849 L -2163 810 L -2170 810 L -2189 791 L -2224 791 L -2227 788 L -2251 788 L -2260 779 L -2326 779 L -2354 807 L -2445 807 L -2576 938 L -2743 938 L -2750 931 L -2794 931 L -2810 947 L -2832 947 L -2846 933 L -2846 930 L -2852 924 L -2873 924 L -2878 929 L -2885 929 L -2889 925 L -2937 925 L -2964 952 L -2964 1000 L -2966 1002 L -2989 1002 L -2990 1003 L -2991 1003 L -2992 1004 L -2993 1004 L -2998 1009 L -2999 1010 L -3000 1010 L -3004 1014 L -3117 1014 L -3117 980 L -3268 980 L -3268 988"/>
+
+      </g>
+
+      <!-- RAILROADS -->
       <g transform="translate(768,520) scale(0.25,0.25)">
 
         <!-- island to switch -->
@@ -173,26 +187,28 @@
         <path class="path path-railway path-railway-north" d="M 745 -1216 L 745 -1101 L 1171 -1101 L 1171 -955 L 1281 -955"/>
 
         <!-- grand central to interchange -->
-        <path class="path path-railway path-railway-east" d="M -1611 -326 L -1611 -302 L -1592 -302 L -1592 -245 L -1186 -245"/>
+        <path class="path path-railway path-railway-west" d="M -1611 -326 L -1611 -302 L -1592 -302 L -1592 -245 L -1186 -245"/>
 
         <!-- interchange to mage district -->
-        <path class="path path-railway path-railway-east" d="M -1186 -245 L -1186 -187 L -1184 -187 L -1184 -185"/>
+        <path class="path path-railway path-railway-west" d="M -1186 -245 L -1186 -187 L -1184 -187 L -1184 -185"/>
 
         <!-- mage district to south (incomplete) -->
-        <path class="path path-railway path-railway-east" d="M -1184 -185 L -1184 -187 L -1186 -187 L -1186 -124 L -1184 -124"/>
+        <path class="path path-railway path-railway-west" d="M -1184 -185 L -1184 -187 L -1186 -187 L -1186 -124 L -1184 -124"/>
 
         <!-- interchange to mage water world -->
-        <path class="path path-railway path-railway-east" d="M -1186 -245 L -1156 -245 L -1156 -252 L -1148 -252 L -1148 -371 L -910 -371 L -910 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -433 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -910 -443 L -910 -441"/>
+        <path class="path path-railway path-railway-west" d="M -1186 -245 L -1156 -245 L -1156 -252 L -1148 -252 L -1148 -371 L -910 -371 L -910 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -433 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -908 -443 L -908 -439 L -912 -439 L -912 -443 L -910 -443 L -910 -441"/>
 
         <!-- grand central to clarnettej -->
-        <path class="path path-railway path-railway-east" d="M -1619 -326 L -1619 -320 L -1625 -320 L -1625 -343 L -2121 -343 L -2121 -576 L -2351 -576 L -2351 -566 L -2354 -566 L -2354 -561 L -2354 -561 L -2364 -561 L -2364 -565"/>
+        <path class="path path-railway path-railway-west" d="M -1619 -326 L -1619 -320 L -1625 -320 L -1625 -343 L -2121 -343 L -2121 -576 L -2351 -576 L -2351 -566 L -2354 -566 L -2354 -561 L -2354 -561 L -2364 -561 L -2364 -565"/>
 
       </g>
 
       <g transform="translate(768,520) scale(0.25,0.25)">
 
         <!-- spawn -->
-        <circle class="place" r="16" cx="58" cy="231" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+        <g transform="translate(58,231)">
+          <image xlink:href="world.png" x="-32" y="-32" width="64" height="64"/>
+        </g>
 
         <!-- island trains station (incomplete) -->
         <circle class="place" r="16" cx="768" cy="-1255" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
@@ -220,6 +236,15 @@
 
         <!-- clarnettej -->
         <circle class="place" r="16" cx="-2361" cy="-576" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- SW relief hut -->
+        <circle class="place" r="16" cx="-3224" cy="972" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- Earthbreach Hold -->
+        <circle class="place" r="16" cx="-3084" cy="1017" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
+
+        <!-- Massive Tree -->
+        <circle class="place" r="16" cx="-1144" cy="420" fill="#ffffff" stroke="#ff0000" stroke-width="2" />
 
       </g>
 

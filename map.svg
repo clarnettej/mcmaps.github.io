@@ -158,15 +158,13 @@
   <!-- SPAWN -->
   <g class="section section-spawn" transform="translate(1536,1024) scale(0.5,0.5)">
 
-    <!-- spawn -->
-    <g transform="translate(58,231) scale(2,2)">
-      <image xlink:href="world.png" x="-8" y="-8" width="16" height="16"/>
-    </g>
+    <!-- spawn point -->
+    <circle cx="58" cy="231" r="8" fill="#000000"/>
 
-    <!-- spawn point south path -->
+    <!-- south path -->
     <path class="road" d="M 62 299 L 67 320 L 63 326 L 63 329 L 53 342 L 52 346 L 45 354 L 45 440 L 59 440"/>
 
-    <!-- spawn point south-east path -->
+    <!-- south-east path -->
     <path class="road" d="M 67 320 L 81 331 L 113 331 L 121 326 L 129 326 L 129 325 L 163 323"/>
 
   </g>
